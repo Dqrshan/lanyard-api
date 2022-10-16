@@ -78,7 +78,7 @@ onStartTyping(() => {
 
     <Card
       name="Lanyard Visualizer"
-      details="by EGGSY"
+      details="made by EGGSY, used by Lorenz"
       state="on GitHub, open-source"
       :timestamps="{ start: new Date().getTime() }"
     />

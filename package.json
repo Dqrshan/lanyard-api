@@ -1,12 +1,11 @@
 {
-  "name": "lanyard-visualizer",
+  "name": "lanyard-api",
   "description": "A beautiful Lanyard visualizer tool to display your Discord status online! Works with Spotify and all RPCs!",
   "license": "MIT",
   "version": "1.0.0",
   "author": {
-    "email": "eggsydev@gmail.com",
-    "name": "Abdulbaki Dursun",
-    "url": "https://eggsy.xyz"
+    "email": "contact@darshan.studio",
+    "name": "Lorenz"
   },
   "scripts": {
     "dev": "vite",
