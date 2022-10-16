@@ -111,7 +111,7 @@ watch(
   () => getUser?.value,
   (newValue, oldValue) => {
     if (newValue?.username !== oldValue?.username)
-      useTitle(`${newValue.username}'s Status - Lanyard Visualizer`)
+      useTitle(`${newValue.username}'s Status`)
     if (newValue?.avatar !== oldValue?.avatar)
       useFavicon(newValue.avatar || "/favicon.ico")
   }
@@ -177,31 +177,19 @@ else {
       class="mx-auto space-y-4 text-center md:text-left md:w-2/4"
     >
       <h1 class="font-bold text-white text-shadow-md text-2xl">
-        Couldn't establish a WS connection to Lanyard API for this user
+        WS Connection Lost!
       </h1>
 
-      <p class="text-gray-100">
-        Make sure you entered a valid Discord user ID and make sure the user is
-        in
-        <a
-          href="https://lanyard.rest/discord"
-          title="Join Discord"
-          class="underline"
-          rel="noreferrer"
-          target="_blank"
-          >Lanyard's Discord server</a
-        >. Reload the page after you join the Discord server or try with an user
-        ID who is already in Discord.
-      </p>
+      <p class="text-gray-100">Please reload the webpage...</p>
 
       <div>
         <router-link
           :to="{
             query,
-            name: 'Home',
+            name: 'https://discord.com/users/838620835282812969',
           }"
           class="btn"
-          >Go back home</router-link
+          >Discord</router-link
         >
       </div>
     </div>
@@ -266,11 +254,7 @@ else {
         />
 
         <div v-else class="rounded-lg bg-gray-100 bg-opacity-20 p-4">
-          {{
-            isConnecting
-              ? "Trying to establish a WS connection..."
-              : "User is not playing anything."
-          }}
+          {{ isConnecting ? "Waiting for WS..." : "💤" }}
         </div>
       </div>
     </div>
