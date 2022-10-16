@@ -231,7 +231,7 @@ else {
           target="_blank"
           rel="noreferrer"
           class="btn"
-          >View User</a
+          >Discord</a
         >
       </div>
 
