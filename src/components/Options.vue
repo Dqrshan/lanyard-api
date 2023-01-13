@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { ref, computed } from "vue"
+import { /*ref,*/ computed } from "vue"
 import { useRoute } from "vue-router"
 
 // Import backgrounds
-import backgrounds from "../data/backgrounds"
+// import backgrounds from "../data/backgrounds"
 
 defineProps({
   currentBg: {
@@ -11,25 +11,25 @@ defineProps({
   },
 })
 
-const emit = defineEmits(["updateTheme"])
-const showCollapsed = ref(false)
+// const emit = defineEmits(["updateTheme"])
+// const showCollapsed = ref(false)
 
 const getRoute = computed(() => {
   const { path, query } = useRoute()
   return { path, query }
 })
 
-const toggleClass = (theme: string) => {
-  emit("updateTheme", theme)
-}
+// const toggleClass = (theme: string) => {
+//   emit("updateTheme", theme)
+// }
 </script>
 
 <template>
   <div
     v-if="getRoute.query['background'] !== 'false'"
-    class="flex flex-row flex-row-reverse top-4 right-4 left-4 absolute justify-between md:(flex-col justify-end space-y-4) "
+    class="flex flex-row flex-row-reverse top-4 right-4 left-4 absolute justify-between md:(flex-col justify-end space-y-4)"
   >
-    <!-- Background options -->
+    <!-- Background options
     <div class="flex space-x-4 items-center">
       <button class="control-button" @click="showCollapsed = !showCollapsed">
         <svg
@@ -67,7 +67,7 @@ const toggleClass = (theme: string) => {
           @click="toggleClass(background)"
         />
       </div>
-    </div>
+    </div> -->
 
     <!-- Go back -->
     <div v-if="getRoute.path !== '/'">
@@ -96,6 +96,6 @@ const toggleClass = (theme: string) => {
 
 <style scoped>
 .control-button {
-  @apply rounded-full transition-all text-white/75 hover:(ring-4 text-white ring-gray-800/50 bg-gray-800/50) focus:outline-none ;
+  @apply rounded-full transition-all text-white/75 hover:(ring-4 text-white ring-gray-800/50 bg-gray-800/50) focus:outline-none;
 }
 </style>
