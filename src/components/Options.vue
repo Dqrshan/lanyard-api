@@ -70,7 +70,7 @@ const getRoute = computed(() => {
     </div> -->
 
     <!-- Go back -->
-    <div v-if="getRoute.path !== '/'">
+    <!-- <div v-if="getRoute.path !== '/'">
       <button
         class="control-button"
         @click="$router.push({ path: '/', query: getRoute.query })"
@@ -90,7 +90,7 @@ const getRoute = computed(() => {
           />
         </svg>
       </button>
-    </div>
+    </div> -->
   </div>
 </template>
 
