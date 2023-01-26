@@ -244,8 +244,8 @@ else {
           "
           :class="isConnecting && 'animate-pulse'"
           :name="getPlayingStatus.name"
-          :largeImage="getPlayingStatus.largeImage || ''"
-          :smallImage="getPlayingStatus.smallImage || ''"
+          :large-image="getPlayingStatus.largeImage || ''"
+          :small-image="getPlayingStatus.smallImage || ''"
           :state="getPlayingStatus.state"
           :details="getPlayingStatus.details"
           :timestamps="getPlayingStatus.timestamps"
@@ -254,7 +254,11 @@ else {
         />
 
         <div v-else class="rounded-lg bg-gray-100 bg-opacity-20 p-4">
-          {{ isConnecting ? "Waiting for WS..." : "💤" }}
+          {{
+            isConnecting
+              ? "Waiting for WS..."
+              : "➝ insta: @bruh.darshan\n➝ https://darshan.studio/"
+          }}
         </div>
       </div>
     </div>
