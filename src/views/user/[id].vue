@@ -257,7 +257,7 @@ else {
           {{
             isConnecting
               ? "Waiting for WS..."
-              : "➝ insta: @bruh.darshan\n➝ https://darshan.studio/"
+              : "overthinking.."
           }}
         </div>
       </div>
