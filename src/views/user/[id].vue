@@ -254,11 +254,7 @@ else {
         />
 
         <div v-else class="rounded-lg bg-gray-100 bg-opacity-20 p-4">
-          {{
-            isConnecting
-              ? "Waiting for WS..."
-              : "overthinking.."
-          }}
+          {{ isConnecting ? "Waiting for WS..." : "offline" }}
         </div>
       </div>
     </div>
